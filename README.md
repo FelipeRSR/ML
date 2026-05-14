@@ -135,7 +135,7 @@ O modelo é avaliado usando múltiplas métricas:
 - **Confusion Matrix:** Análise de verdadeiros/falsos positivos e negativos
 
 ```python
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score, balanced_accuracy_score, classification_report, confusion_matrix
 
 print(f"Acurácia: {balanced_accuracy_score(y_test, y_pred):.4f}")
 print(classification_report(y_test, y_pred))
