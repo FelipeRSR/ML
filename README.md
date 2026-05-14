@@ -214,7 +214,7 @@ Exemplo de ranking (pode variar):
 ### Métricas de Desempenho
 
 ```
-Acurácia: ~0.85-0.90
+Acurácia: ~0.70-0.85
 
 Classification Report:
               precision    recall  f1-score   support
