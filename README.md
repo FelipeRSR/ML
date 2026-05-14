@@ -109,10 +109,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
 from sklearn.ensemble import RandomForestClassifier
 
 rf_model = RandomForestClassifier(
-    n_estimators=100,      # Número de árvores
-    random_state=42,       # Reprodutibilidade
-    n_jobs=-1,            # Usar todos os processadores
-    max_depth=10          # Profundidade máxima das árvores
+    n_estimators=100,       # Número de árvores
+    random_state=42,        # Reprodutibilidade
+    n_jobs=-1,              # Usar todos os processadores
+    max_depth=10            # Profundidade máxima das árvores
+    class_weight='balanced' # Ajusta automaticamente o peso das classes.
 )
 ```
 
@@ -136,7 +137,7 @@ O modelo é avaliado usando múltiplas métricas:
 ```python
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-print(f"Acurácia: {accuracy_score(y_test, y_pred):.4f}")
+print(f"Acurácia: {balanced_accuracy_score(y_test, y_pred):.4f}")
 print(classification_report(y_test, y_pred))
 print(confusion_matrix(y_test, y_pred))
 ```
